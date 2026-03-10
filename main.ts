@@ -11,7 +11,7 @@ let varScore = 0
 
 // setup
 basic.clearScreen()
-basic.showIcon(IconNames.Happy)
+basic.showIcon(IconNames.Scissors)
 pause(1000)
 
 // game
@@ -44,7 +44,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
   basic.clearScreen()
-  basic.showString("score:" + varScore)
+  basic.showString("score: " + varScore)
   pause(1000)
   basic.showIcon(IconNames.Happy)
 })
