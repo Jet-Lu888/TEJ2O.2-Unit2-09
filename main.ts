@@ -1,8 +1,49 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: XXX
+ * Created by: Jet Lu
  * Created on: Sep 2020
- * This program ...
+ * This program will play rock paper scissors and help keep track of the score.
 */
 
-basic.showString('Hello, World!')
+// creating variables
+let randomNumber = 0
+let score = 0
+
+// setup
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+pause(1000)
+
+// game
+input.onGesture(Gesture.Shake, function () {
+  randomNumber = randint(0, 2)
+  basic.clearScreen()
+
+    // rock
+  if (randomNumber == 0) {
+    basic.showIcon(IconNames.SmallSquare)
+  }
+  
+    // paper
+  if (randomNumber == 1) {
+    basic.showIcon(IconNames.Square)
+  }
+
+    // scissors
+  if (randomNumber == 2) {
+    basic.showIcon(IconNames.Scissors)
+  }
+
+  pause(1000)
+  basic.showIcon(IconNames.Happy)
+})
+
+// score tracker
+input.onButtonPressed(Button.A, function () {
+  score = score + 1
+})
+input.onButtonPressed(Button.B, function () {
+  basic.showNumber(score)
+  pause(1000)
+  basic.showIcon(IconNames.Happy)
+})
