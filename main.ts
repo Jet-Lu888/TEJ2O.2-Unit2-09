@@ -7,7 +7,7 @@
 
 // creating variables
 let randomNumber = 0
-let score = 0
+let varScore = 0
 
 // setup
 basic.clearScreen()
@@ -40,10 +40,11 @@ input.onGesture(Gesture.Shake, function () {
 
 // score tracker
 input.onButtonPressed(Button.A, function () {
-  score = score + 1
+  varScore = varScore + 1
 })
 input.onButtonPressed(Button.B, function () {
-  basic.showNumber(score)
+  basic.clearScreen()
+  basic.showString("score:" + varScore)
   pause(1000)
   basic.showIcon(IconNames.Happy)
 })
