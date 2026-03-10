@@ -34,7 +34,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.showIcon(IconNames.Scissors)
   }
 
-  pause(1000)
+  pause(5000)
   basic.showIcon(IconNames.Happy)
 })
 
