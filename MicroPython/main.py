@@ -42,7 +42,8 @@ while True:
         # score tracker
     if button_a.was_pressed():
         varScore = varScore + 1
-
+        display.show(Image.YES)
+        
     # show score
     if button_b.was_pressed():
         display.scroll("score: " + str(varScore))
