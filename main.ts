@@ -19,17 +19,17 @@ input.onGesture(Gesture.Shake, function () {
   randomNumber = randint(0, 2)
   basic.clearScreen()
 
-    // rock
+  // rock
   if (randomNumber == 0) {
     basic.showIcon(IconNames.SmallSquare)
   }
   
-    // paper
+  // paper
   if (randomNumber == 1) {
     basic.showIcon(IconNames.Square)
   }
 
-    // scissors
+  // scissors
   if (randomNumber == 2) {
     basic.showIcon(IconNames.Scissors)
   }
@@ -41,6 +41,7 @@ input.onGesture(Gesture.Shake, function () {
 // score tracker
 input.onButtonPressed(Button.A, function () {
   varScore = varScore + 1
+  basic.showIcon(IconNames.Yes)
 })
 input.onButtonPressed(Button.B, function () {
   basic.clearScreen()
