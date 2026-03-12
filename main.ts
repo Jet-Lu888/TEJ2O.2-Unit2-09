@@ -11,7 +11,7 @@ let varScore = 0
 
 // setup
 basic.clearScreen()
-basic.showIcon(IconNames.Scissors)
+basic.showIcon(IconNames.Happy)
 pause(1000)
 
 // game
